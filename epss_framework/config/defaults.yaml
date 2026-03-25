@@ -1,0 +1,40 @@
+# EPSS-Augmented CVE Prioritization Framework
+# Default Configuration
+# Override via environment variables or CLI flags
+
+trivy:
+  binary_path: "trivy"
+  timeout_seconds: 600
+  severity_filter:
+    - UNKNOWN
+    - LOW
+    - MEDIUM
+    - HIGH
+    - CRITICAL
+  skip_db_update: false
+  max_retries: 3
+
+epss:
+  api_base_url: "https://api.first.org/data/v1/epss"
+  batch_size: 100
+  cache_ttl_hours: 24
+  rate_limit_requests_per_second: 5.0
+  fallback_score: 0.0
+
+scoring:
+  weight_cvss: 0.4
+  weight_epss: 0.4
+  weight_reachability: 0.2
+  use_ml_weights: false
+  threshold_critical: 0.8
+  threshold_high: 0.6
+  threshold_medium: 0.4
+
+pipeline:
+  output_dir: "./epss-reports"
+  output_format:
+    - json
+    - html
+  log_level: "INFO"
+  log_format: "json"
+  max_concurrent_scans: 4

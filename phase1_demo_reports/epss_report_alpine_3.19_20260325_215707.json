@@ -1,0 +1,154 @@
+{
+  "report_metadata": {
+    "generated_at": "2026-03-25T21:57:07.851900",
+    "framework_version": "0.1.0",
+    "scoring_method": "heuristic",
+    "scoring_weights": {
+      "cvss": 0.4,
+      "epss": 0.4,
+      "reachability": 0.2
+    }
+  },
+  "image": {
+    "name": "alpine:3.19",
+    "digest": "sha256:83b2b6703a620bf2e001ab57f7adc414d891787b3c59859b1b62909e48dd2242",
+    "os_family": "alpine",
+    "os_name": "3.19.9",
+    "scan_timestamp": "2026-03-25T21:57:07.639299"
+  },
+  "summary": {
+    "total_vulnerabilities": 6,
+    "severity_breakdown": {
+      "MEDIUM": 3,
+      "LOW": 3
+    },
+    "alert_fatigue_metrics": {
+      "total_vulns": 6,
+      "cvss_critical_high": 0,
+      "composite_critical_high": 0,
+      "alert_reduction_pct": 0.0
+    }
+  },
+  "vulnerabilities": [
+    {
+      "rank": 1,
+      "cve_id": "CVE-2024-58251",
+      "composite_score": 0.400308,
+      "composite_severity": "MEDIUM",
+      "cvss_v3_score": 5.0,
+      "cvss_severity": "MEDIUM",
+      "epss_score": 0.00077,
+      "epss_percentile": 0.2297,
+      "reachability_score": 1.0,
+      "affected_package": "busybox",
+      "installed_version": "1.36.1-r20",
+      "fixed_version": "1.36.1-r21",
+      "title": "In netstat in BusyBox through 1.37.0, local users can launch of networ ...",
+      "score_explanation": "Primary driver: CVSS severity | CVSS 5.0/10 \u2192 medium severity | EPSS 0.0008 \u2192 low exploit probability | Vulnerable component is reachable in runtime",
+      "cwe_ids": [
+        "CWE-150"
+      ],
+      "has_fix": true
+    },
+    {
+      "rank": 2,
+      "cve_id": "CVE-2024-58251",
+      "composite_score": 0.400308,
+      "composite_severity": "MEDIUM",
+      "cvss_v3_score": 5.0,
+      "cvss_severity": "MEDIUM",
+      "epss_score": 0.00077,
+      "epss_percentile": 0.2297,
+      "reachability_score": 1.0,
+      "affected_package": "busybox-binsh",
+      "installed_version": "1.36.1-r20",
+      "fixed_version": "1.36.1-r21",
+      "title": "In netstat in BusyBox through 1.37.0, local users can launch of networ ...",
+      "score_explanation": "Primary driver: CVSS severity | CVSS 5.0/10 \u2192 medium severity | EPSS 0.0008 \u2192 low exploit probability | Vulnerable component is reachable in runtime",
+      "cwe_ids": [
+        "CWE-150"
+      ],
+      "has_fix": true
+    },
+    {
+      "rank": 3,
+      "cve_id": "CVE-2024-58251",
+      "composite_score": 0.400308,
+      "composite_severity": "MEDIUM",
+      "cvss_v3_score": 5.0,
+      "cvss_severity": "MEDIUM",
+      "epss_score": 0.00077,
+      "epss_percentile": 0.2297,
+      "reachability_score": 1.0,
+      "affected_package": "ssl_client",
+      "installed_version": "1.36.1-r20",
+      "fixed_version": "1.36.1-r21",
+      "title": "In netstat in BusyBox through 1.37.0, local users can launch of networ ...",
+      "score_explanation": "Primary driver: CVSS severity | CVSS 5.0/10 \u2192 medium severity | EPSS 0.0008 \u2192 low exploit probability | Vulnerable component is reachable in runtime",
+      "cwe_ids": [
+        "CWE-150"
+      ],
+      "has_fix": true
+    },
+    {
+      "rank": 4,
+      "cve_id": "CVE-2025-46394",
+      "composite_score": 0.332332,
+      "composite_severity": "LOW",
+      "cvss_v3_score": 3.3,
+      "cvss_severity": "LOW",
+      "epss_score": 0.00083,
+      "epss_percentile": 0.24224,
+      "reachability_score": 1.0,
+      "affected_package": "busybox",
+      "installed_version": "1.36.1-r20",
+      "fixed_version": "1.36.1-r21",
+      "title": "In tar in BusyBox through 1.37.0, a TAR archive can have filenames hid ...",
+      "score_explanation": "Primary driver: Reachability | CVSS 3.3/10 \u2192 low severity | EPSS 0.0008 \u2192 low exploit probability | Vulnerable component is reachable in runtime",
+      "cwe_ids": [
+        "CWE-451"
+      ],
+      "has_fix": true
+    },
+    {
+      "rank": 5,
+      "cve_id": "CVE-2025-46394",
+      "composite_score": 0.332332,
+      "composite_severity": "LOW",
+      "cvss_v3_score": 3.3,
+      "cvss_severity": "LOW",
+      "epss_score": 0.00083,
+      "epss_percentile": 0.24224,
+      "reachability_score": 1.0,
+      "affected_package": "busybox-binsh",
+      "installed_version": "1.36.1-r20",
+      "fixed_version": "1.36.1-r21",
+      "title": "In tar in BusyBox through 1.37.0, a TAR archive can have filenames hid ...",
+      "score_explanation": "Primary driver: Reachability | CVSS 3.3/10 \u2192 low severity | EPSS 0.0008 \u2192 low exploit probability | Vulnerable component is reachable in runtime",
+      "cwe_ids": [
+        "CWE-451"
+      ],
+      "has_fix": true
+    },
+    {
+      "rank": 6,
+      "cve_id": "CVE-2025-46394",
+      "composite_score": 0.332332,
+      "composite_severity": "LOW",
+      "cvss_v3_score": 3.3,
+      "cvss_severity": "LOW",
+      "epss_score": 0.00083,
+      "epss_percentile": 0.24224,
+      "reachability_score": 1.0,
+      "affected_package": "ssl_client",
+      "installed_version": "1.36.1-r20",
+      "fixed_version": "1.36.1-r21",
+      "title": "In tar in BusyBox through 1.37.0, a TAR archive can have filenames hid ...",
+      "score_explanation": "Primary driver: Reachability | CVSS 3.3/10 \u2192 low severity | EPSS 0.0008 \u2192 low exploit probability | Vulnerable component is reachable in runtime",
+      "cwe_ids": [
+        "CWE-451"
+      ],
+      "has_fix": true
+    }
+  ]
+}

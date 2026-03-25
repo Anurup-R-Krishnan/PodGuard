@@ -1,0 +1,13 @@
+site_name: EPSS-Augmented CVE Prioritization Framework
+site_description: Documentation for EPSS-based container vulnerability triage
+repo_url: https://github.com/example/epss-framework
+theme:
+  name: material
+  features:
+    - navigation.sections
+    - content.code.copy
+
+nav:
+  - Home: index.md
+  - Architecture: architecture.md
+  - API Contracts: api-contracts.md

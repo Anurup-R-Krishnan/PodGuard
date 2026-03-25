@@ -1,0 +1,13 @@
+format: json
+severity:
+  - UNKNOWN
+  - LOW
+  - MEDIUM
+  - HIGH
+  - CRITICAL
+vulnerability:
+  type:
+    - os
+    - library
+timeout: 10m
+ignore-unfixed: false

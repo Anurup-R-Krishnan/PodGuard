@@ -1,0 +1,29 @@
+{
+  "report_metadata": {
+    "generated_at": "2026-03-25T21:57:18.929378",
+    "framework_version": "0.1.0",
+    "scoring_method": "heuristic",
+    "scoring_weights": {
+      "cvss": 0.4,
+      "epss": 0.4,
+      "reachability": 0.2
+    }
+  },
+  "image": {
+    "name": "busybox:1.36",
+    "digest": "sha256:b116e155074440ffd9e449559433feb4cd2341eb3554b1da1c638c976e56451d",
+    "os_family": "",
+    "os_name": "",
+    "scan_timestamp": "2026-03-25T21:57:18.861828"
+  },
+  "summary": {
+    "total_vulnerabilities": 0,
+    "severity_breakdown": {},
+    "alert_fatigue_metrics": {
+      "total": 0,
+      "actionable": 0,
+      "reduction_pct": 0.0
+    }
+  },
+  "vulnerabilities": []
+}

@@ -1,0 +1,29 @@
+{
+  "report_metadata": {
+    "generated_at": "2026-03-25T21:57:13.423348",
+    "framework_version": "0.1.0",
+    "scoring_method": "heuristic",
+    "scoring_weights": {
+      "cvss": 0.4,
+      "epss": 0.4,
+      "reachability": 0.2
+    }
+  },
+  "image": {
+    "name": "alpine:3.18",
+    "digest": "sha256:802c91d5298192c0f3a08101aeb5f9ade2992e22c9e27fa8b88eab82602550d0",
+    "os_family": "alpine",
+    "os_name": "3.18.12",
+    "scan_timestamp": "2026-03-25T21:57:13.349974"
+  },
+  "summary": {
+    "total_vulnerabilities": 0,
+    "severity_breakdown": {},
+    "alert_fatigue_metrics": {
+      "total": 0,
+      "actionable": 0,
+      "reduction_pct": 0.0
+    }
+  },
+  "vulnerabilities": []
+}

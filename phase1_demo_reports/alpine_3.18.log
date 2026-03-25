@@ -1,0 +1,38 @@
+[03/25/26 21:57:08] INFO                                                        
+                             ╔══════════════════════════════════════════════════
+                             ╗                                                  
+                             ║  EPSS-Augmented CVE Prioritization Pipeline     ║
+                             ╚══════════════════════════════════════════════════
+                             ╝                                                  
+                             Image: alpine:3.18                                 
+                                                                                
+                    INFO     ═══ Step 1/4: Scanning Image ═══                   
+                    INFO     ✓ Trivy found at:                                  
+                             /home/anuruprkris/.local/bin/trivy                 
+                    INFO     🔍 Scanning image: alpine:3.18                     
+[03/25/26 21:57:13] INFO     ✓ Scan complete: 0 vulnerabilities found (C:0 H:0) 
+                    INFO     ═══ Step 2/4: EPSS Enrichment ═══                  
+                    WARNING  No CVEs found, skipping EPSS enrichment.           
+                    INFO     ═══ Step 3/4: Composite Scoring ═══                
+                    INFO     ═══ Step 4/4: Ranking & Packaging ═══              
+                    INFO     ✓ Pipeline complete! 0 CVEs scored and ranked      
+                    INFO       Composite severity breakdown: {}                 
+                    INFO       Alert fatigue reduction: 0.0%                    
+                    INFO     📄 JSON report saved:                              
+                             /home/anuruprkris/Project/EPSS/phase1_demo_reports/
+                             epss_report_alpine_3.18_20260325_215713.json       
+  📄 JSON: 
+/home/anuruprkris/Project/EPSS/phase1_demo_reports/epss_report_alpine_3.18_20260
+325_215713.json
+                                                                                
+                      🏆 Top 5 Prioritized Vulnerabilities                      
+┏━━┳━━━━━━━━━━━━━━━━┳━━━━━━━━┳━━━━━━━━┳━━━━┳━━━━━━┳━━━━━━━━━━━━━━━━━━┳━━━━━━━━━┓
+┃  ┃                ┃        ┃        ┃    ┃      ┃                  ┃ Fix     ┃
+┃  ┃ CVE ID         ┃ Compo… ┃ Sever… ┃ C… ┃ EPSS ┃ Package          ┃ Availa… ┃
+┡━━╇━━━━━━━━━━━━━━━━╇━━━━━━━━╇━━━━━━━━╇━━━━╇━━━━━━╇━━━━━━━━━━━━━━━━━━╇━━━━━━━━━┩
+└──┴────────────────┴────────┴────────┴────┴──────┴──────────────────┴─────────┘
+╭───────────────────────────────── 📊 Summary ─────────────────────────────────╮
+│ Total CVEs: 0                                                                │
+│ Severity: {}                                                                 │
+│ Alert Reduction: 0.0% (CVSS critical/high: 0 → Composite critical/high: 0)   │
+╰──────────────────────────────────────────────────────────────────────────────╯

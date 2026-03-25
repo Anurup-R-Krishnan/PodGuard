@@ -1,0 +1,16 @@
+[03/25/26 21:45:26] INFO                                                        
+                             ╔══════════════════════════════════════════════════
+                             ╗                                                  
+                             ║  EPSS-Augmented CVE Prioritization Pipeline     ║
+                             ╚══════════════════════════════════════════════════
+                             ╝                                                  
+                             Image: python:3.11                                 
+                                                                                
+                    INFO     ═══ Step 1/4: Scanning Image ═══                   
+                    ERROR    Pipeline failed: Trivy binary not found at 'trivy'.
+                             Install Trivy:                                     
+                             https://aquasecurity.github.io/trivy/latest/getting
+                             -started/installation/                             
+✗ Pipeline failed: Pipeline execution failed: Trivy binary not found at 'trivy'.
+Install Trivy: 
+https://aquasecurity.github.io/trivy/latest/getting-started/installation/

@@ -1,0 +1,94 @@
+name: 🔍 EPSS Container Scan
+
+description: "Scan a container image with EPSS-augmented vulnerability triage"
+
+inputs:
+  image:
+    description: "Container image to scan (e.g., nginx:latest)"
+    required: true
+  weights:
+    description: "Composite scoring weights: cvss,epss,reachability"
+    required: false
+    default: "0.4,0.4,0.2"
+  fail-threshold:
+    description: "Fail if any CVE composite score exceeds this value (0-1)"
+    required: false
+    default: "0.9"
+  output-format:
+    description: "Report formats (comma-separated: json,html)"
+    required: false
+    default: "json,html"
+  top-n:
+    description: "Number of top vulnerabilities to display"
+    required: false
+    default: "10"
+
+outputs:
+  total-vulns:
+    description: "Total number of vulnerabilities found"
+    value: ${{ steps.scan.outputs.total_vulns }}
+  critical-count:
+    description: "Number of CRITICAL composite severity CVEs"
+    value: ${{ steps.scan.outputs.critical_count }}
+  report-path:
+    description: "Path to the generated JSON report"
+    value: ${{ steps.scan.outputs.report_path }}
+
+runs:
+  using: "composite"
+  steps:
+    - name: Install Trivy
+      shell: bash
+      run: |
+        sudo apt-get install wget apt-transport-https gnupg lsb-release -y
+        wget -qO - https://aquasecurity.github.io/trivy-repo/deb/public.key | sudo gpg --dearmor -o /usr/share/keyrings/trivy.gpg
+        echo "deb [signed-by=/usr/share/keyrings/trivy.gpg] https://aquasecurity.github.io/trivy-repo/deb $(lsb_release -sc) main" | sudo tee /etc/apt/sources.list.d/trivy.list
+        sudo apt-get update
+        sudo apt-get install trivy -y
+
+    - name: Install EPSS Framework
+      shell: bash
+      run: pip install -e .
+
+    - name: Run EPSS-Augmented Scan
+      id: scan
+      shell: bash
+      run: |
+        epss-triage scan "${{ inputs.image }}" \
+          --weights "${{ inputs.weights }}" \
+          --format "${{ inputs.output-format }}" \
+          --top "${{ inputs.top-n }}" \
+          --output ./epss-reports
+
+        # Extract metrics from JSON report
+        REPORT=$(ls -t ./epss-reports/*.json | head -1)
+        TOTAL=$(python3 -c "import json; d=json.load(open('$REPORT')); print(d['summary']['total_vulnerabilities'])")
+        CRITICAL=$(python3 -c "import json; d=json.load(open('$REPORT')); print(d['summary']['severity_breakdown'].get('CRITICAL', 0))")
+
+        echo "total_vulns=$TOTAL" >> $GITHUB_OUTPUT
+        echo "critical_count=$CRITICAL" >> $GITHUB_OUTPUT
+        echo "report_path=$REPORT" >> $GITHUB_OUTPUT
+
+    - name: Upload Reports
+      uses: actions/upload-artifact@v4
+      with:
+        name: epss-scan-reports
+        path: ./epss-reports/
+
+    - name: Policy Gate Check
+      shell: bash
+      run: |
+        REPORT=$(ls -t ./epss-reports/*.json | head -1)
+        python3 -c "
+        import json, sys
+        data = json.load(open('$REPORT'))
+        threshold = float('${{ inputs.fail-threshold }}')
+        violations = [v for v in data['vulnerabilities'] if v['composite_score'] >= threshold]
+        if violations:
+            print(f'❌ POLICY VIOLATION: {len(violations)} CVEs exceed threshold {threshold}')
+            for v in violations[:5]:
+                print(f'  • {v[\"cve_id\"]}: composite={v[\"composite_score\"]:.4f} ({v[\"composite_severity\"]})')
+            sys.exit(1)
+        else:
+            print(f'✅ All CVEs below threshold {threshold}')
+        "

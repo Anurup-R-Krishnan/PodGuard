@@ -1,0 +1,82 @@
+[build-system]
+requires = ["setuptools>=68.0", "wheel"]
+build-backend = "setuptools.build_meta"
+
+[project]
+name = "epss-triage"
+version = "0.1.0"
+description = "EPSS-Augmented CVE Prioritization Framework for Docker Container Security"
+readme = "README.md"
+license = {text = "MIT"}
+requires-python = ">=3.11"
+authors = [
+    {name = "EPSS Framework Contributors"}
+]
+keywords = ["security", "vulnerability", "CVE", "EPSS", "CVSS", "Docker", "container", "triage"]
+classifiers = [
+    "Development Status :: 3 - Alpha",
+    "Intended Audience :: Developers",
+    "Intended Audience :: System Administrators",
+    "Topic :: Security",
+    "Programming Language :: Python :: 3.11",
+    "Programming Language :: Python :: 3.12",
+    "License :: OSI Approved :: MIT License",
+]
+
+dependencies = [
+    "httpx>=0.27.0",
+    "typer[all]>=0.12.0",
+    "pydantic>=2.6.0",
+    "rich>=13.7.0",
+    "jinja2>=3.1.0",
+    "aiosqlite>=0.20.0",
+    "orjson>=3.9.0",
+]
+
+[project.optional-dependencies]
+ml = [
+    "xgboost>=2.0.0",
+    "scikit-learn>=1.4.0",
+    "pandas>=2.2.0",
+    "numpy>=1.26.0",
+    "optuna>=3.5.0",
+    "matplotlib>=3.8.0",
+    "seaborn>=0.13.0",
+]
+dev = [
+    "pytest>=8.0.0",
+    "pytest-cov>=4.1.0",
+    "pytest-asyncio>=0.23.0",
+    "pytest-timeout>=2.3.0",
+    "ruff>=0.3.0",
+    "mypy>=1.8.0",
+    "pre-commit>=3.6.0",
+    "mkdocs>=1.6.0",
+    "mkdocs-material>=9.5.0",
+]
+all = ["epss-triage[ml,dev]"]
+
+[project.scripts]
+epss-triage = "epss_framework.cli:app"
+
+[tool.setuptools.packages.find]
+include = ["epss_framework*"]
+
+[tool.ruff]
+target-version = "py311"
+line-length = 100
+
+[tool.ruff.lint]
+select = ["E", "F", "W", "I", "N", "UP", "S", "B"]
+ignore = ["S603", "S607"]
+
+[tool.pytest.ini_options]
+testpaths = ["epss_framework/tests"]
+asyncio_mode = "auto"
+addopts = "-v --tb=short --cov=epss_framework --cov-report=term-missing --cov-fail-under=80"
+
+[tool.mypy]
+python_version = "3.11"
+strict = true
+warn_return_any = true
+warn_unused_configs = true

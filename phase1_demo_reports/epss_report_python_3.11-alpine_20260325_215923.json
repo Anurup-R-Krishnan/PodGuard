@@ -1,0 +1,153 @@
+{
+  "report_metadata": {
+    "generated_at": "2026-03-25T21:59:23.930375",
+    "framework_version": "0.1.0",
+    "scoring_method": "heuristic",
+    "scoring_weights": {
+      "cvss": 0.4,
+      "epss": 0.4,
+      "reachability": 0.2
+    }
+  },
+  "image": {
+    "name": "python:3.11-alpine",
+    "digest": "sha256:001bd3ff980e446d15420ed12295faadd9250bc2fc86c604c620601e071237dc",
+    "os_family": "alpine",
+    "os_name": "3.23.3",
+    "scan_timestamp": "2026-03-25T21:59:23.336989"
+  },
+  "summary": {
+    "total_vulnerabilities": 6,
+    "severity_breakdown": {
+      "MEDIUM": 5,
+      "LOW": 1
+    },
+    "alert_fatigue_metrics": {
+      "total_vulns": 6,
+      "cvss_critical_high": 3,
+      "composite_critical_high": 0,
+      "alert_reduction_pct": 100.0
+    }
+  },
+  "vulnerabilities": [
+    {
+      "rank": 1,
+      "cve_id": "CVE-2026-23949",
+      "composite_score": 0.544348,
+      "composite_severity": "MEDIUM",
+      "cvss_v3_score": 8.6,
+      "cvss_severity": "HIGH",
+      "epss_score": 0.00087,
+      "epss_percentile": 0.25055,
+      "reachability_score": 1.0,
+      "affected_package": "jaraco.context",
+      "installed_version": "5.3.0",
+      "fixed_version": "6.1.0",
+      "title": "jaraco.context: jaraco.context: Path traversal via malicious tar archives",
+      "score_explanation": "Primary driver: CVSS severity | CVSS 8.6/10 \u2192 high severity | EPSS 0.0009 \u2192 low exploit probability | Vulnerable component is reachable in runtime",
+      "cwe_ids": [
+        "CWE-22"
+      ],
+      "has_fix": true
+    },
+    {
+      "rank": 2,
+      "cve_id": "CVE-2026-22184",
+      "composite_score": 0.512068,
+      "composite_severity": "MEDIUM",
+      "cvss_v3_score": 7.8,
+      "cvss_severity": "HIGH",
+      "epss_score": 0.00017,
+      "epss_percentile": 0.04115,
+      "reachability_score": 1.0,
+      "affected_package": "zlib",
+      "installed_version": "1.3.1-r2",
+      "fixed_version": "1.3.2-r0",
+      "title": "zlib: zlib: Arbitrary code execution via buffer overflow in untgz utility",
+      "score_explanation": "Primary driver: CVSS severity | CVSS 7.8/10 \u2192 high severity | EPSS 0.0002 \u2192 low exploit probability | Vulnerable component is reachable in runtime",
+      "cwe_ids": [
+        "CWE-787"
+      ],
+      "has_fix": true
+    },
+    {
+      "rank": 3,
+      "cve_id": "CVE-2026-24049",
+      "composite_score": 0.484044,
+      "composite_severity": "MEDIUM",
+      "cvss_v3_score": 7.1,
+      "cvss_severity": "HIGH",
+      "epss_score": 0.00011,
+      "epss_percentile": 0.01289,
+      "reachability_score": 1.0,
+      "affected_package": "wheel",
+      "installed_version": "0.45.1",
+      "fixed_version": "0.46.2",
+      "title": "wheel: wheel: Privilege Escalation or Arbitrary Code Execution via malicious wheel file unpacking",
+      "score_explanation": "Primary driver: CVSS severity | CVSS 7.1/10 \u2192 high severity | EPSS 0.0001 \u2192 low exploit probability | Vulnerable component is reachable in runtime",
+      "cwe_ids": [
+        "CWE-22",
+        "CWE-732"
+      ],
+      "has_fix": true
+    },
+    {
+      "rank": 4,
+      "cve_id": "CVE-2026-27171",
+      "composite_score": 0.420028,
+      "composite_severity": "MEDIUM",
+      "cvss_v3_score": 5.5,
+      "cvss_severity": "MEDIUM",
+      "epss_score": 7e-05,
+      "epss_percentile": 0.00632,
+      "reachability_score": 1.0,
+      "affected_package": "zlib",
+      "installed_version": "1.3.1-r2",
+      "fixed_version": "1.3.2-r0",
+      "title": "zlib: zlib: Denial of Service via infinite loop in CRC32 combine functions",
+      "score_explanation": "Primary driver: CVSS severity | CVSS 5.5/10 \u2192 medium severity | EPSS 0.0001 \u2192 low exploit probability | Vulnerable component is reachable in runtime",
+      "cwe_ids": [
+        "CWE-1284"
+      ],
+      "has_fix": true
+    },
+    {
+      "rank": 5,
+      "cve_id": "CVE-2025-8869",
+      "composite_score": 0.41208,
+      "composite_severity": "MEDIUM",
+      "cvss_v3_score": 5.3,
+      "cvss_severity": "MEDIUM",
+      "epss_score": 0.0002,
+      "epss_percentile": 0.05306,
+      "reachability_score": 1.0,
+      "affected_package": "pip",
+      "installed_version": "24.0",
+      "fixed_version": "25.3",
+      "title": "pip: pip missing checks on symbolic link extraction",
+      "score_explanation": "Primary driver: CVSS severity | CVSS 5.3/10 \u2192 medium severity | EPSS 0.0002 \u2192 low exploit probability | Vulnerable component is reachable in runtime",
+      "cwe_ids": [],
+      "has_fix": true
+    },
+    {
+      "rank": 6,
+      "cve_id": "CVE-2026-1703",
+      "composite_score": 0.356088,
+      "composite_severity": "LOW",
+      "cvss_v3_score": 3.9,
+      "cvss_severity": "LOW",
+      "epss_score": 0.00022,
+      "epss_percentile": 0.05868,
+      "reachability_score": 1.0,
+      "affected_package": "pip",
+      "installed_version": "24.0",
+      "fixed_version": "26.0",
+      "title": "pip: pip: Information disclosure via path traversal when installing crafted wheel archives",
+      "score_explanation": "Primary driver: Reachability | CVSS 3.9/10 \u2192 low severity | EPSS 0.0002 \u2192 low exploit probability | Vulnerable component is reachable in runtime",
+      "cwe_ids": [
+        "CWE-22"
+      ],
+      "has_fix": true
+    }
+  ]
+}

@@ -1,0 +1,73 @@
+{
+  "report_metadata": {
+    "generated_at": "2026-03-25T21:57:48.857278",
+    "framework_version": "0.1.0",
+    "scoring_method": "heuristic",
+    "scoring_weights": {
+      "cvss": 0.4,
+      "epss": 0.4,
+      "reachability": 0.2
+    }
+  },
+  "image": {
+    "name": "ubuntu:20.04",
+    "digest": "sha256:b7bab04fd9aa0c771e5720bf0cc7cbf993fd6946645983d9096126e5af45d713",
+    "os_family": "ubuntu",
+    "os_name": "20.04",
+    "scan_timestamp": "2026-03-25T21:57:48.271455"
+  },
+  "summary": {
+    "total_vulnerabilities": 2,
+    "severity_breakdown": {
+      "MEDIUM": 2
+    },
+    "alert_fatigue_metrics": {
+      "total_vulns": 2,
+      "cvss_critical_high": 0,
+      "composite_critical_high": 0,
+      "alert_reduction_pct": 0.0
+    }
+  },
+  "vulnerabilities": [
+    {
+      "rank": 1,
+      "cve_id": "CVE-2025-4802",
+      "composite_score": 0.480172,
+      "composite_severity": "MEDIUM",
+      "cvss_v3_score": 7.0,
+      "cvss_severity": "MEDIUM",
+      "epss_score": 0.00043,
+      "epss_percentile": 0.13103,
+      "reachability_score": 1.0,
+      "affected_package": "libc-bin",
+      "installed_version": "2.31-0ubuntu9.17",
+      "fixed_version": "2.31-0ubuntu9.18",
+      "title": "glibc: static setuid binary dlopen may incorrectly search LD_LIBRARY_PATH",
+      "score_explanation": "Primary driver: CVSS severity | CVSS 7.0/10 \u2192 high severity | EPSS 0.0004 \u2192 low exploit probability | Vulnerable component is reachable in runtime",
+      "cwe_ids": [
+        "CWE-426"
+      ],
+      "has_fix": true
+    },
+    {
+      "rank": 2,
+      "cve_id": "CVE-2025-4802",
+      "composite_score": 0.480172,
+      "composite_severity": "MEDIUM",
+      "cvss_v3_score": 7.0,
+      "cvss_severity": "MEDIUM",
+      "epss_score": 0.00043,
+      "epss_percentile": 0.13103,
+      "reachability_score": 1.0,
+      "affected_package": "libc6",
+      "installed_version": "2.31-0ubuntu9.17",
+      "fixed_version": "2.31-0ubuntu9.18",
+      "title": "glibc: static setuid binary dlopen may incorrectly search LD_LIBRARY_PATH",
+      "score_explanation": "Primary driver: CVSS severity | CVSS 7.0/10 \u2192 high severity | EPSS 0.0004 \u2192 low exploit probability | Vulnerable component is reachable in runtime",
+      "cwe_ids": [
+        "CWE-426"
+      ],
+      "has_fix": true
+    }
+  ]
+}

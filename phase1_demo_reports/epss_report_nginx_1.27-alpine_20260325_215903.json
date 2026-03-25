@@ -1,0 +1,1357 @@
+{
+  "report_metadata": {
+    "generated_at": "2026-03-25T21:59:03.647287",
+    "framework_version": "0.1.0",
+    "scoring_method": "heuristic",
+    "scoring_weights": {
+      "cvss": 0.4,
+      "epss": 0.4,
+      "reachability": 0.2
+    }
+  },
+  "image": {
+    "name": "nginx:1.27-alpine",
+    "digest": "sha256:6769dc3a703c719c1d2756bda113659be28ae16cf0da58dd5fd823d6b9a050ea",
+    "os_family": "alpine",
+    "os_name": "3.21.3",
+    "scan_timestamp": "2026-03-25T21:59:03.011644"
+  },
+  "summary": {
+    "total_vulnerabilities": 66,
+    "severity_breakdown": {
+      "MEDIUM": 46,
+      "LOW": 20
+    },
+    "alert_fatigue_metrics": {
+      "total_vulns": 66,
+      "cvss_critical_high": 20,
+      "composite_critical_high": 0,
+      "alert_reduction_pct": 100.0
+    }
+  },
+  "vulnerabilities": [
+    {
+      "rank": 1,
+      "cve_id": "CVE-2025-15467",
+      "composite_score": 0.595276,
+      "composite_severity": "MEDIUM",
+      "cvss_v3_score": 9.8,
+      "cvss_severity": "CRITICAL",
+      "epss_score": 0.00819,
+      "epss_percentile": 0.74255,
+      "reachability_score": 1.0,
+      "affected_package": "libcrypto3",
+      "installed_version": "3.3.3-r0",
+      "fixed_version": "3.3.6-r0",
+      "title": "openssl: OpenSSL: Remote code execution or Denial of Service via oversized Initialization Vector in CMS parsing",
+      "score_explanation": "Primary driver: CVSS severity | CVSS 9.8/10 \u2192 extremely severe vulnerability | EPSS 0.0082 \u2192 low exploit probability | Vulnerable component is reachable in runtime",
+      "cwe_ids": [
+        "CWE-787"
+      ],
+      "has_fix": true
+    },
+    {
+      "rank": 2,
+      "cve_id": "CVE-2025-15467",
+      "composite_score": 0.595276,
+      "composite_severity": "MEDIUM",
+      "cvss_v3_score": 9.8,
+      "cvss_severity": "CRITICAL",
+      "epss_score": 0.00819,
+      "epss_percentile": 0.74255,
+      "reachability_score": 1.0,
+      "affected_package": "libssl3",
+      "installed_version": "3.3.3-r0",
+      "fixed_version": "3.3.6-r0",
+      "title": "openssl: OpenSSL: Remote code execution or Denial of Service via oversized Initialization Vector in CMS parsing",
+      "score_explanation": "Primary driver: CVSS severity | CVSS 9.8/10 \u2192 extremely severe vulnerability | EPSS 0.0082 \u2192 low exploit probability | Vulnerable component is reachable in runtime",
+      "cwe_ids": [
+        "CWE-787"
+      ],
+      "has_fix": true
+    },
+    {
+      "rank": 3,
+      "cve_id": "CVE-2026-32767",
+      "composite_score": 0.592064,
+      "composite_severity": "MEDIUM",
+      "cvss_v3_score": 9.8,
+      "cvss_severity": "CRITICAL",
+      "epss_score": 0.00016,
+      "epss_percentile": 0.03671,
+      "reachability_score": 1.0,
+      "affected_package": "libexpat",
+      "installed_version": "2.7.0-r0",
+      "fixed_version": "2.7.5-r0",
+      "title": "SiYuan: Authorization Bypass Allows Arbitrary SQL Execution via Search API",
+      "score_explanation": "Primary driver: CVSS severity | CVSS 9.8/10 \u2192 extremely severe vulnerability | EPSS 0.0002 \u2192 low exploit probability | Vulnerable component is reachable in runtime",
+      "cwe_ids": [],
+      "has_fix": true
+    },
+    {
+      "rank": 4,
+      "cve_id": "CVE-2025-49796",
+      "composite_score": 0.565964,
+      "composite_severity": "MEDIUM",
+      "cvss_v3_score": 9.1,
+      "cvss_severity": "CRITICAL",
+      "epss_score": 0.00491,
+      "epss_percentile": 0.65414,
+      "reachability_score": 1.0,
+      "affected_package": "libxml2",
+      "installed_version": "2.13.4-r5",
+      "fixed_version": "2.13.9-r0",
+      "title": "libxml: Type confusion leads to Denial of service (DoS)",
+      "score_explanation": "Primary driver: CVSS severity | CVSS 9.1/10 \u2192 extremely severe vulnerability | EPSS 0.0049 \u2192 low exploit probability | Vulnerable component is reachable in runtime",
+      "cwe_ids": [
+        "CWE-125"
+      ],
+      "has_fix": true
+    },
+    {
+      "rank": 5,
+      "cve_id": "CVE-2025-49794",
+      "composite_score": 0.564452,
+      "composite_severity": "MEDIUM",
+      "cvss_v3_score": 9.1,
+      "cvss_severity": "CRITICAL",
+      "epss_score": 0.00113,
+      "epss_percentile": 0.29871,
+      "reachability_score": 1.0,
+      "affected_package": "libxml2",
+      "installed_version": "2.13.4-r5",
+      "fixed_version": "2.13.9-r0",
+      "title": "libxml: Heap use after free (UAF) leads to Denial of service (DoS)",
+      "score_explanation": "Primary driver: CVSS severity | CVSS 9.1/10 \u2192 extremely severe vulnerability | EPSS 0.0011 \u2192 low exploit probability | Vulnerable component is reachable in runtime",
+      "cwe_ids": [
+        "CWE-825"
+      ],
+      "has_fix": true
+    },
+    {
+      "rank": 6,
+      "cve_id": "CVE-2026-25646",
+      "composite_score": 0.524372,
+      "composite_severity": "MEDIUM",
+      "cvss_v3_score": 8.1,
+      "cvss_severity": "HIGH",
+      "epss_score": 0.00093,
+      "epss_percentile": 0.26001,
+      "reachability_score": 1.0,
+      "affected_package": "libpng",
+      "installed_version": "1.6.47-r0",
+      "fixed_version": "1.6.55-r0",
+      "title": "libpng: LIBPNG has a heap buffer overflow in png_set_quantize",
+      "score_explanation": "Primary driver: CVSS severity | CVSS 8.1/10 \u2192 high severity | EPSS 0.0009 \u2192 low exploit probability | Vulnerable component is reachable in runtime",
+      "cwe_ids": [
+        "CWE-122",
+        "CWE-126"
+      ],
+      "has_fix": true
+    },
+    {
+      "rank": 7,
+      "cve_id": "CVE-2026-22801",
+      "composite_score": 0.512072,
+      "composite_severity": "MEDIUM",
+      "cvss_v3_score": 7.8,
+      "cvss_severity": "HIGH",
+      "epss_score": 0.00018,
+      "epss_percentile": 0.04557,
+      "reachability_score": 1.0,
+      "affected_package": "libpng",
+      "installed_version": "1.6.47-r0",
+      "fixed_version": "1.6.54-r0",
+      "title": "libpng: libpng: Information disclosure and denial of service via integer truncation in simplified write API",
+      "score_explanation": "Primary driver: CVSS severity | CVSS 7.8/10 \u2192 high severity | EPSS 0.0002 \u2192 low exploit probability | Vulnerable component is reachable in runtime",
+      "cwe_ids": [
+        "CWE-125",
+        "CWE-190"
+      ],
+      "has_fix": true
+    },
+    {
+      "rank": 8,
+      "cve_id": "CVE-2026-25210",
+      "composite_score": 0.512024,
+      "composite_severity": "MEDIUM",
+      "cvss_v3_score": 7.8,
+      "cvss_severity": "HIGH",
+      "epss_score": 6e-05,
+      "epss_percentile": 0.00345,
+      "reachability_score": 1.0,
+      "affected_package": "libexpat",
+      "installed_version": "2.7.0-r0",
+      "fixed_version": "2.7.4-r0",
+      "title": "libexpat: libexpat: Information disclosure and data integrity issues due to integer overflow in buffer reallocation",
+      "score_explanation": "Primary driver: CVSS severity | CVSS 7.8/10 \u2192 high severity | EPSS 0.0001 \u2192 low exploit probability | Vulnerable component is reachable in runtime",
+      "cwe_ids": [
+        "CWE-190"
+      ],
+      "has_fix": true
+    },
+    {
+      "rank": 9,
+      "cve_id": "CVE-2025-6021",
+      "composite_score": 0.503008,
+      "composite_severity": "MEDIUM",
+      "cvss_v3_score": 7.5,
+      "cvss_severity": "HIGH",
+      "epss_score": 0.00752,
+      "epss_percentile": 0.73054,
+      "reachability_score": 1.0,
+      "affected_package": "libxml2",
+      "installed_version": "2.13.4-r5",
+      "fixed_version": "2.13.9-r0",
+      "title": "libxml2: Integer Overflow in xmlBuildQName() Leads to Stack Buffer Overflow in libxml2",
+      "score_explanation": "Primary driver: CVSS severity | CVSS 7.5/10 \u2192 high severity | EPSS 0.0075 \u2192 low exploit probability | Vulnerable component is reachable in runtime",
+      "cwe_ids": [
+        "CWE-190",
+        "CWE-787"
+      ],
+      "has_fix": true
+    },
+    {
+      "rank": 10,
+      "cve_id": "CVE-2025-32414",
+      "composite_score": 0.500712,
+      "composite_severity": "MEDIUM",
+      "cvss_v3_score": 7.5,
+      "cvss_severity": "HIGH",
+      "epss_score": 0.00178,
+      "epss_percentile": 0.39248,
+      "reachability_score": 1.0,
+      "affected_package": "libxml2",
+      "installed_version": "2.13.4-r5",
+      "fixed_version": "2.13.4-r6",
+      "title": "libxml2: Out-of-Bounds Read in libxml2",
+      "score_explanation": "Primary driver: CVSS severity | CVSS 7.5/10 \u2192 high severity | EPSS 0.0018 \u2192 low exploit probability | Vulnerable component is reachable in runtime",
+      "cwe_ids": [
+        "CWE-393",
+        "CWE-252"
+      ],
+      "has_fix": true
+    },
+    {
+      "rank": 11,
+      "cve_id": "CVE-2025-49795",
+      "composite_score": 0.500604,
+      "composite_severity": "MEDIUM",
+      "cvss_v3_score": 7.5,
+      "cvss_severity": "HIGH",
+      "epss_score": 0.00151,
+      "epss_percentile": 0.35651,
+      "reachability_score": 1.0,
+      "affected_package": "libxml2",
+      "installed_version": "2.13.4-r5",
+      "fixed_version": "2.13.9-r0",
+      "title": "libxml: Null pointer dereference leads to Denial of service (DoS)",
+      "score_explanation": "Primary driver: CVSS severity | CVSS 7.5/10 \u2192 high severity | EPSS 0.0015 \u2192 low exploit probability | Vulnerable component is reachable in runtime",
+      "cwe_ids": [
+        "CWE-825"
+      ],
+      "has_fix": true
+    },
+    {
+      "rank": 12,
+      "cve_id": "CVE-2025-32415",
+      "composite_score": 0.500284,
+      "composite_severity": "MEDIUM",
+      "cvss_v3_score": 7.5,
+      "cvss_severity": "HIGH",
+      "epss_score": 0.00071,
+      "epss_percentile": 0.21698,
+      "reachability_score": 1.0,
+      "affected_package": "libxml2",
+      "installed_version": "2.13.4-r5",
+      "fixed_version": "2.13.4-r6",
+      "title": "libxml2: Out-of-bounds Read in xmlSchemaIDCFillNodeTables",
+      "score_explanation": "Primary driver: CVSS severity | CVSS 7.5/10 \u2192 high severity | EPSS 0.0007 \u2192 low exploit probability | Vulnerable component is reachable in runtime",
+      "cwe_ids": [
+        "CWE-1284",
+        "CWE-125"
+      ],
+      "has_fix": true
+    },
+    {
+      "rank": 13,
+      "cve_id": "CVE-2025-69421",
+      "composite_score": 0.500136,
+      "composite_severity": "MEDIUM",
+      "cvss_v3_score": 7.5,
+      "cvss_severity": "HIGH",
+      "epss_score": 0.00034,
+      "epss_percentile": 0.09864,
+      "reachability_score": 1.0,
+      "affected_package": "libcrypto3",
+      "installed_version": "3.3.3-r0",
+      "fixed_version": "3.3.6-r0",
+      "title": "openssl: OpenSSL: Denial of Service via malformed PKCS#12 file processing",
+      "score_explanation": "Primary driver: CVSS severity | CVSS 7.5/10 \u2192 high severity | EPSS 0.0003 \u2192 low exploit probability | Vulnerable component is reachable in runtime",
+      "cwe_ids": [
+        "CWE-476"
+      ],
+      "has_fix": true
+    },
+    {
+      "rank": 14,
+      "cve_id": "CVE-2025-69421",
+      "composite_score": 0.500136,
+      "composite_severity": "MEDIUM",
+      "cvss_v3_score": 7.5,
+      "cvss_severity": "HIGH",
+      "epss_score": 0.00034,
+      "epss_percentile": 0.09864,
+      "reachability_score": 1.0,
+      "affected_package": "libssl3",
+      "installed_version": "3.3.3-r0",
+      "fixed_version": "3.3.6-r0",
+      "title": "openssl: OpenSSL: Denial of Service via malformed PKCS#12 file processing",
+      "score_explanation": "Primary driver: CVSS severity | CVSS 7.5/10 \u2192 high severity | EPSS 0.0003 \u2192 low exploit probability | Vulnerable component is reachable in runtime",
+      "cwe_ids": [
+        "CWE-476"
+      ],
+      "has_fix": true
+    },
+    {
+      "rank": 15,
+      "cve_id": "CVE-2025-69419",
+      "composite_score": 0.49624,
+      "composite_severity": "MEDIUM",
+      "cvss_v3_score": 7.4,
+      "cvss_severity": "HIGH",
+      "epss_score": 0.0006,
+      "epss_percentile": 0.18771,
+      "reachability_score": 1.0,
+      "affected_package": "libcrypto3",
+      "installed_version": "3.3.3-r0",
+      "fixed_version": "3.3.6-r0",
+      "title": "openssl: OpenSSL: Arbitrary code execution due to out-of-bounds write in PKCS#12 processing",
+      "score_explanation": "Primary driver: CVSS severity | CVSS 7.4/10 \u2192 high severity | EPSS 0.0006 \u2192 low exploit probability | Vulnerable component is reachable in runtime",
+      "cwe_ids": [
+        "CWE-787"
+      ],
+      "has_fix": true
+    },
+    {
+      "rank": 16,
+      "cve_id": "CVE-2025-69419",
+      "composite_score": 0.49624,
+      "composite_severity": "MEDIUM",
+      "cvss_v3_score": 7.4,
+      "cvss_severity": "HIGH",
+      "epss_score": 0.0006,
+      "epss_percentile": 0.18771,
+      "reachability_score": 1.0,
+      "affected_package": "libssl3",
+      "installed_version": "3.3.3-r0",
+      "fixed_version": "3.3.6-r0",
+      "title": "openssl: OpenSSL: Arbitrary code execution due to out-of-bounds write in PKCS#12 processing",
+      "score_explanation": "Primary driver: CVSS severity | CVSS 7.4/10 \u2192 high severity | EPSS 0.0006 \u2192 low exploit probability | Vulnerable component is reachable in runtime",
+      "cwe_ids": [
+        "CWE-787"
+      ],
+      "has_fix": true
+    },
+    {
+      "rank": 17,
+      "cve_id": "CVE-2025-66293",
+      "composite_score": 0.484328,
+      "composite_severity": "MEDIUM",
+      "cvss_v3_score": 7.1,
+      "cvss_severity": "HIGH",
+      "epss_score": 0.00082,
+      "epss_percentile": 0.23994,
+      "reachability_score": 1.0,
+      "affected_package": "libpng",
+      "installed_version": "1.6.47-r0",
+      "fixed_version": "1.6.53-r0",
+      "title": "libpng: LIBPNG out-of-bounds read in png_image_read_composite",
+      "score_explanation": "Primary driver: CVSS severity | CVSS 7.1/10 \u2192 high severity | EPSS 0.0008 \u2192 low exploit probability | Vulnerable component is reachable in runtime",
+      "cwe_ids": [
+        "CWE-125"
+      ],
+      "has_fix": true
+    },
+    {
+      "rank": 18,
+      "cve_id": "CVE-2025-64720",
+      "composite_score": 0.484284,
+      "composite_severity": "MEDIUM",
+      "cvss_v3_score": 7.1,
+      "cvss_severity": "HIGH",
+      "epss_score": 0.00071,
+      "epss_percentile": 0.21592,
+      "reachability_score": 1.0,
+      "affected_package": "libpng",
+      "installed_version": "1.6.47-r0",
+      "fixed_version": "1.6.53-r0",
+      "title": "libpng: LIBPNG buffer overflow",
+      "score_explanation": "Primary driver: CVSS severity | CVSS 7.1/10 \u2192 high severity | EPSS 0.0007 \u2192 low exploit probability | Vulnerable component is reachable in runtime",
+      "cwe_ids": [
+        "CWE-125"
+      ],
+      "has_fix": true
+    },
+    {
+      "rank": 19,
+      "cve_id": "CVE-2025-65018",
+      "composite_score": 0.484268,
+      "composite_severity": "MEDIUM",
+      "cvss_v3_score": 7.1,
+      "cvss_severity": "HIGH",
+      "epss_score": 0.00067,
+      "epss_percentile": 0.20556,
+      "reachability_score": 1.0,
+      "affected_package": "libpng",
+      "installed_version": "1.6.47-r0",
+      "fixed_version": "1.6.53-r0",
+      "title": "libpng: LIBPNG heap buffer overflow",
+      "score_explanation": "Primary driver: CVSS severity | CVSS 7.1/10 \u2192 high severity | EPSS 0.0007 \u2192 low exploit probability | Vulnerable component is reachable in runtime",
+      "cwe_ids": [
+        "CWE-122",
+        "CWE-787"
+      ],
+      "has_fix": true
+    },
+    {
+      "rank": 20,
+      "cve_id": "CVE-2026-22695",
+      "composite_score": 0.48412,
+      "composite_severity": "MEDIUM",
+      "cvss_v3_score": 7.1,
+      "cvss_severity": "HIGH",
+      "epss_score": 0.0003,
+      "epss_percentile": 0.08632,
+      "reachability_score": 1.0,
+      "affected_package": "libpng",
+      "installed_version": "1.6.47-r0",
+      "fixed_version": "1.6.54-r0",
+      "title": "libpng: libpng: Denial of service and information disclosure via heap buffer over-read in png_image_finish_read",
+      "score_explanation": "Primary driver: CVSS severity | CVSS 7.1/10 \u2192 high severity | EPSS 0.0003 \u2192 low exploit probability | Vulnerable component is reachable in runtime",
+      "cwe_ids": [
+        "CWE-125"
+      ],
+      "has_fix": true
+    },
+    {
+      "rank": 21,
+      "cve_id": "CVE-2025-4947",
+      "composite_score": 0.4603,
+      "composite_severity": "MEDIUM",
+      "cvss_v3_score": 6.5,
+      "cvss_severity": "MEDIUM",
+      "epss_score": 0.00075,
+      "epss_percentile": 0.22467,
+      "reachability_score": 1.0,
+      "affected_package": "curl",
+      "installed_version": "8.12.1-r1",
+      "fixed_version": "8.14.0-r0",
+      "title": "libcurl: curl: QUIC certificate check skip with wolfSSL",
+      "score_explanation": "Primary driver: CVSS severity | CVSS 6.5/10 \u2192 medium severity | EPSS 0.0008 \u2192 low exploit probability | Vulnerable component is reachable in runtime",
+      "cwe_ids": [
+        "CWE-295"
+      ],
+      "has_fix": true
+    },
+    {
+      "rank": 22,
+      "cve_id": "CVE-2025-4947",
+      "composite_score": 0.4603,
+      "composite_severity": "MEDIUM",
+      "cvss_v3_score": 6.5,
+      "cvss_severity": "MEDIUM",
+      "epss_score": 0.00075,
+      "epss_percentile": 0.22467,
+      "reachability_score": 1.0,
+      "affected_package": "libcurl",
+      "installed_version": "8.12.1-r1",
+      "fixed_version": "8.14.0-r0",
+      "title": "libcurl: curl: QUIC certificate check skip with wolfSSL",
+      "score_explanation": "Primary driver: CVSS severity | CVSS 6.5/10 \u2192 medium severity | EPSS 0.0008 \u2192 low exploit probability | Vulnerable component is reachable in runtime",
+      "cwe_ids": [
+        "CWE-295"
+      ],
+      "has_fix": true
+    },
+    {
+      "rank": 23,
+      "cve_id": "CVE-2025-64506",
+      "composite_score": 0.444072,
+      "composite_severity": "MEDIUM",
+      "cvss_v3_score": 6.1,
+      "cvss_severity": "MEDIUM",
+      "epss_score": 0.00018,
+      "epss_percentile": 0.04731,
+      "reachability_score": 1.0,
+      "affected_package": "libpng",
+      "installed_version": "1.6.47-r0",
+      "fixed_version": "1.6.53-r0",
+      "title": "libpng: LIBPNG heap buffer over-read",
+      "score_explanation": "Primary driver: CVSS severity | CVSS 6.1/10 \u2192 medium severity | EPSS 0.0002 \u2192 low exploit probability | Vulnerable component is reachable in runtime",
+      "cwe_ids": [
+        "CWE-125"
+      ],
+      "has_fix": true
+    },
+    {
+      "rank": 24,
+      "cve_id": "CVE-2025-69420",
+      "composite_score": 0.43716,
+      "composite_severity": "MEDIUM",
+      "cvss_v3_score": 5.9,
+      "cvss_severity": "MEDIUM",
+      "epss_score": 0.0029,
+      "epss_percentile": 0.52205,
+      "reachability_score": 1.0,
+      "affected_package": "libcrypto3",
+      "installed_version": "3.3.3-r0",
+      "fixed_version": "3.3.6-r0",
+      "title": "openssl: OpenSSL: Denial of Service via malformed TimeStamp Response",
+      "score_explanation": "Primary driver: CVSS severity | CVSS 5.9/10 \u2192 medium severity | EPSS 0.0029 \u2192 low exploit probability | Vulnerable component is reachable in runtime",
+      "cwe_ids": [
+        "CWE-754"
+      ],
+      "has_fix": true
+    },
+    {
+      "rank": 25,
+      "cve_id": "CVE-2025-69420",
+      "composite_score": 0.43716,
+      "composite_severity": "MEDIUM",
+      "cvss_v3_score": 5.9,
+      "cvss_severity": "MEDIUM",
+      "epss_score": 0.0029,
+      "epss_percentile": 0.52205,
+      "reachability_score": 1.0,
+      "affected_package": "libssl3",
+      "installed_version": "3.3.3-r0",
+      "fixed_version": "3.3.6-r0",
+      "title": "openssl: OpenSSL: Denial of Service via malformed TimeStamp Response",
+      "score_explanation": "Primary driver: CVSS severity | CVSS 5.9/10 \u2192 medium severity | EPSS 0.0029 \u2192 low exploit probability | Vulnerable component is reachable in runtime",
+      "cwe_ids": [
+        "CWE-754"
+      ],
+      "has_fix": true
+    },
+    {
+      "rank": 26,
+      "cve_id": "CVE-2026-22796",
+      "composite_score": 0.436448,
+      "composite_severity": "MEDIUM",
+      "cvss_v3_score": 5.9,
+      "cvss_severity": "MEDIUM",
+      "epss_score": 0.00112,
+      "epss_percentile": 0.29596,
+      "reachability_score": 1.0,
+      "affected_package": "libcrypto3",
+      "installed_version": "3.3.3-r0",
+      "fixed_version": "3.3.6-r0",
+      "title": "openssl: OpenSSL: Denial of Service via type confusion in PKCS#7 signature verification",
+      "score_explanation": "Primary driver: CVSS severity | CVSS 5.9/10 \u2192 medium severity | EPSS 0.0011 \u2192 low exploit probability | Vulnerable component is reachable in runtime",
+      "cwe_ids": [
+        "CWE-754"
+      ],
+      "has_fix": true
+    },
+    {
+      "rank": 27,
+      "cve_id": "CVE-2026-22796",
+      "composite_score": 0.436448,
+      "composite_severity": "MEDIUM",
+      "cvss_v3_score": 5.9,
+      "cvss_severity": "MEDIUM",
+      "epss_score": 0.00112,
+      "epss_percentile": 0.29596,
+      "reachability_score": 1.0,
+      "affected_package": "libssl3",
+      "installed_version": "3.3.3-r0",
+      "fixed_version": "3.3.6-r0",
+      "title": "openssl: OpenSSL: Denial of Service via type confusion in PKCS#7 signature verification",
+      "score_explanation": "Primary driver: CVSS severity | CVSS 5.9/10 \u2192 medium severity | EPSS 0.0011 \u2192 low exploit probability | Vulnerable component is reachable in runtime",
+      "cwe_ids": [
+        "CWE-754"
+      ],
+      "has_fix": true
+    },
+    {
+      "rank": 28,
+      "cve_id": "CVE-2025-66199",
+      "composite_score": 0.436256,
+      "composite_severity": "MEDIUM",
+      "cvss_v3_score": 5.9,
+      "cvss_severity": "MEDIUM",
+      "epss_score": 0.00064,
+      "epss_percentile": 0.19854,
+      "reachability_score": 1.0,
+      "affected_package": "libcrypto3",
+      "installed_version": "3.3.3-r0",
+      "fixed_version": "3.3.6-r0",
+      "title": "openssl: OpenSSL: Denial of Service due to excessive memory allocation in TLS 1.3 certificate compression",
+      "score_explanation": "Primary driver: CVSS severity | CVSS 5.9/10 \u2192 medium severity | EPSS 0.0006 \u2192 low exploit probability | Vulnerable component is reachable in runtime",
+      "cwe_ids": [
+        "CWE-789"
+      ],
+      "has_fix": true
+    },
+    {
+      "rank": 29,
+      "cve_id": "CVE-2025-66199",
+      "composite_score": 0.436256,
+      "composite_severity": "MEDIUM",
+      "cvss_v3_score": 5.9,
+      "cvss_severity": "MEDIUM",
+      "epss_score": 0.00064,
+      "epss_percentile": 0.19854,
+      "reachability_score": 1.0,
+      "affected_package": "libssl3",
+      "installed_version": "3.3.3-r0",
+      "fixed_version": "3.3.6-r0",
+      "title": "openssl: OpenSSL: Denial of Service due to excessive memory allocation in TLS 1.3 certificate compression",
+      "score_explanation": "Primary driver: CVSS severity | CVSS 5.9/10 \u2192 medium severity | EPSS 0.0006 \u2192 low exploit probability | Vulnerable component is reachable in runtime",
+      "cwe_ids": [
+        "CWE-789"
+      ],
+      "has_fix": true
+    },
+    {
+      "rank": 30,
+      "cve_id": "CVE-2025-9231",
+      "composite_score": 0.436088,
+      "composite_severity": "MEDIUM",
+      "cvss_v3_score": 5.9,
+      "cvss_severity": "MEDIUM",
+      "epss_score": 0.00022,
+      "epss_percentile": 0.05892,
+      "reachability_score": 1.0,
+      "affected_package": "libcrypto3",
+      "installed_version": "3.3.3-r0",
+      "fixed_version": "3.3.5-r0",
+      "title": "openssl: Timing side-channel in SM2 algorithm on 64 bit ARM",
+      "score_explanation": "Primary driver: CVSS severity | CVSS 5.9/10 \u2192 medium severity | EPSS 0.0002 \u2192 low exploit probability | Vulnerable component is reachable in runtime",
+      "cwe_ids": [
+        "CWE-385"
+      ],
+      "has_fix": true
+    },
+    {
+      "rank": 31,
+      "cve_id": "CVE-2025-9231",
+      "composite_score": 0.436088,
+      "composite_severity": "MEDIUM",
+      "cvss_v3_score": 5.9,
+      "cvss_severity": "MEDIUM",
+      "epss_score": 0.00022,
+      "epss_percentile": 0.05892,
+      "reachability_score": 1.0,
+      "affected_package": "libssl3",
+      "installed_version": "3.3.3-r0",
+      "fixed_version": "3.3.5-r0",
+      "title": "openssl: Timing side-channel in SM2 algorithm on 64 bit ARM",
+      "score_explanation": "Primary driver: CVSS severity | CVSS 5.9/10 \u2192 medium severity | EPSS 0.0002 \u2192 low exploit probability | Vulnerable component is reachable in runtime",
+      "cwe_ids": [
+        "CWE-385"
+      ],
+      "has_fix": true
+    },
+    {
+      "rank": 32,
+      "cve_id": "CVE-2025-15468",
+      "composite_score": 0.436084,
+      "composite_severity": "MEDIUM",
+      "cvss_v3_score": 5.9,
+      "cvss_severity": "MEDIUM",
+      "epss_score": 0.00021,
+      "epss_percentile": 0.05568,
+      "reachability_score": 1.0,
+      "affected_package": "libcrypto3",
+      "installed_version": "3.3.3-r0",
+      "fixed_version": "3.3.6-r0",
+      "title": "openssl: OpenSSL: Denial of Service via NULL pointer dereference in QUIC protocol handling",
+      "score_explanation": "Primary driver: CVSS severity | CVSS 5.9/10 \u2192 medium severity | EPSS 0.0002 \u2192 low exploit probability | Vulnerable component is reachable in runtime",
+      "cwe_ids": [
+        "CWE-476"
+      ],
+      "has_fix": true
+    },
+    {
+      "rank": 33,
+      "cve_id": "CVE-2025-15468",
+      "composite_score": 0.436084,
+      "composite_severity": "MEDIUM",
+      "cvss_v3_score": 5.9,
+      "cvss_severity": "MEDIUM",
+      "epss_score": 0.00021,
+      "epss_percentile": 0.05568,
+      "reachability_score": 1.0,
+      "affected_package": "libssl3",
+      "installed_version": "3.3.3-r0",
+      "fixed_version": "3.3.6-r0",
+      "title": "openssl: OpenSSL: Denial of Service via NULL pointer dereference in QUIC protocol handling",
+      "score_explanation": "Primary driver: CVSS severity | CVSS 5.9/10 \u2192 medium severity | EPSS 0.0002 \u2192 low exploit probability | Vulnerable component is reachable in runtime",
+      "cwe_ids": [
+        "CWE-476"
+      ],
+      "has_fix": true
+    },
+    {
+      "rank": 34,
+      "cve_id": "CVE-2025-62408",
+      "composite_score": 0.436076,
+      "composite_severity": "MEDIUM",
+      "cvss_v3_score": 5.9,
+      "cvss_severity": "MEDIUM",
+      "epss_score": 0.00019,
+      "epss_percentile": 0.0502,
+      "reachability_score": 1.0,
+      "affected_package": "c-ares",
+      "installed_version": "1.34.5-r0",
+      "fixed_version": "1.34.6-r0",
+      "title": "c-ares: c-ares: Denial of Service due to query termination after maximum attempts",
+      "score_explanation": "Primary driver: CVSS severity | CVSS 5.9/10 \u2192 medium severity | EPSS 0.0002 \u2192 low exploit probability | Vulnerable component is reachable in runtime",
+      "cwe_ids": [
+        "CWE-416"
+      ],
+      "has_fix": true
+    },
+    {
+      "rank": 35,
+      "cve_id": "CVE-2025-9230",
+      "composite_score": 0.424136,
+      "composite_severity": "MEDIUM",
+      "cvss_v3_score": 5.6,
+      "cvss_severity": "MEDIUM",
+      "epss_score": 0.00034,
+      "epss_percentile": 0.09977,
+      "reachability_score": 1.0,
+      "affected_package": "libcrypto3",
+      "installed_version": "3.3.3-r0",
+      "fixed_version": "3.3.5-r0",
+      "title": "openssl: Out-of-bounds read & write in RFC 3211 KEK Unwrap",
+      "score_explanation": "Primary driver: CVSS severity | CVSS 5.6/10 \u2192 medium severity | EPSS 0.0003 \u2192 low exploit probability | Vulnerable component is reachable in runtime",
+      "cwe_ids": [
+        "CWE-125",
+        "CWE-787"
+      ],
+      "has_fix": true
+    },
+    {
+      "rank": 36,
+      "cve_id": "CVE-2025-9230",
+      "composite_score": 0.424136,
+      "composite_severity": "MEDIUM",
+      "cvss_v3_score": 5.6,
+      "cvss_severity": "MEDIUM",
+      "epss_score": 0.00034,
+      "epss_percentile": 0.09977,
+      "reachability_score": 1.0,
+      "affected_package": "libssl3",
+      "installed_version": "3.3.3-r0",
+      "fixed_version": "3.3.5-r0",
+      "title": "openssl: Out-of-bounds read & write in RFC 3211 KEK Unwrap",
+      "score_explanation": "Primary driver: CVSS severity | CVSS 5.6/10 \u2192 medium severity | EPSS 0.0003 \u2192 low exploit probability | Vulnerable component is reachable in runtime",
+      "cwe_ids": [
+        "CWE-125",
+        "CWE-787"
+      ],
+      "has_fix": true
+    },
+    {
+      "rank": 37,
+      "cve_id": "CVE-2026-22795",
+      "composite_score": 0.420096,
+      "composite_severity": "MEDIUM",
+      "cvss_v3_score": 5.5,
+      "cvss_severity": "MEDIUM",
+      "epss_score": 0.00024,
+      "epss_percentile": 0.06427,
+      "reachability_score": 1.0,
+      "affected_package": "libcrypto3",
+      "installed_version": "3.3.3-r0",
+      "fixed_version": "3.3.6-r0",
+      "title": "openssl: OpenSSL: Denial of Service due to type confusion in PKCS#12 file processing",
+      "score_explanation": "Primary driver: CVSS severity | CVSS 5.5/10 \u2192 medium severity | EPSS 0.0002 \u2192 low exploit probability | Vulnerable component is reachable in runtime",
+      "cwe_ids": [
+        "CWE-754"
+      ],
+      "has_fix": true
+    },
+    {
+      "rank": 38,
+      "cve_id": "CVE-2026-22795",
+      "composite_score": 0.420096,
+      "composite_severity": "MEDIUM",
+      "cvss_v3_score": 5.5,
+      "cvss_severity": "MEDIUM",
+      "epss_score": 0.00024,
+      "epss_percentile": 0.06427,
+      "reachability_score": 1.0,
+      "affected_package": "libssl3",
+      "installed_version": "3.3.3-r0",
+      "fixed_version": "3.3.6-r0",
+      "title": "openssl: OpenSSL: Denial of Service due to type confusion in PKCS#12 file processing",
+      "score_explanation": "Primary driver: CVSS severity | CVSS 5.5/10 \u2192 medium severity | EPSS 0.0002 \u2192 low exploit probability | Vulnerable component is reachable in runtime",
+      "cwe_ids": [
+        "CWE-754"
+      ],
+      "has_fix": true
+    },
+    {
+      "rank": 39,
+      "cve_id": "CVE-2026-32778",
+      "composite_score": 0.420052,
+      "composite_severity": "MEDIUM",
+      "cvss_v3_score": 5.5,
+      "cvss_severity": "MEDIUM",
+      "epss_score": 0.00013,
+      "epss_percentile": 0.0225,
+      "reachability_score": 1.0,
+      "affected_package": "libexpat",
+      "installed_version": "2.7.0-r0",
+      "fixed_version": "2.7.5-r0",
+      "title": "libexpat: libexpat: Denial of Service via NULL pointer dereference after out-of-memory condition",
+      "score_explanation": "Primary driver: CVSS severity | CVSS 5.5/10 \u2192 medium severity | EPSS 0.0001 \u2192 low exploit probability | Vulnerable component is reachable in runtime",
+      "cwe_ids": [
+        "CWE-476"
+      ],
+      "has_fix": true
+    },
+    {
+      "rank": 40,
+      "cve_id": "CVE-2026-32777",
+      "composite_score": 0.420048,
+      "composite_severity": "MEDIUM",
+      "cvss_v3_score": 5.5,
+      "cvss_severity": "MEDIUM",
+      "epss_score": 0.00012,
+      "epss_percentile": 0.01668,
+      "reachability_score": 1.0,
+      "affected_package": "libexpat",
+      "installed_version": "2.7.0-r0",
+      "fixed_version": "2.7.5-r0",
+      "title": "libexpat: libexpat: Denial of Service via infinite loop in DTD content parsing",
+      "score_explanation": "Primary driver: CVSS severity | CVSS 5.5/10 \u2192 medium severity | EPSS 0.0001 \u2192 low exploit probability | Vulnerable component is reachable in runtime",
+      "cwe_ids": [
+        "CWE-835"
+      ],
+      "has_fix": true
+    },
+    {
+      "rank": 41,
+      "cve_id": "CVE-2025-59375",
+      "composite_score": 0.412164,
+      "composite_severity": "MEDIUM",
+      "cvss_v3_score": 5.3,
+      "cvss_severity": "MEDIUM",
+      "epss_score": 0.00041,
+      "epss_percentile": 0.12534,
+      "reachability_score": 1.0,
+      "affected_package": "libexpat",
+      "installed_version": "2.7.0-r0",
+      "fixed_version": "2.7.2-r0",
+      "title": "expat: libexpat in Expat allows attackers to trigger large dynamic memory allocations via a small document that is submitted for parsing",
+      "score_explanation": "Primary driver: CVSS severity | CVSS 5.3/10 \u2192 medium severity | EPSS 0.0004 \u2192 low exploit probability | Vulnerable component is reachable in runtime",
+      "cwe_ids": [
+        "CWE-770"
+      ],
+      "has_fix": true
+    },
+    {
+      "rank": 42,
+      "cve_id": "CVE-2025-9086",
+      "composite_score": 0.41214,
+      "composite_severity": "MEDIUM",
+      "cvss_v3_score": 5.3,
+      "cvss_severity": "MEDIUM",
+      "epss_score": 0.00035,
+      "epss_percentile": 0.10064,
+      "reachability_score": 1.0,
+      "affected_package": "curl",
+      "installed_version": "8.12.1-r1",
+      "fixed_version": "8.14.1-r2",
+      "title": "curl: libcurl: Curl out of bounds read for cookie path",
+      "score_explanation": "Primary driver: CVSS severity | CVSS 5.3/10 \u2192 medium severity | EPSS 0.0003 \u2192 low exploit probability | Vulnerable component is reachable in runtime",
+      "cwe_ids": [
+        "CWE-125"
+      ],
+      "has_fix": true
+    },
+    {
+      "rank": 43,
+      "cve_id": "CVE-2025-9086",
+      "composite_score": 0.41214,
+      "composite_severity": "MEDIUM",
+      "cvss_v3_score": 5.3,
+      "cvss_severity": "MEDIUM",
+      "epss_score": 0.00035,
+      "epss_percentile": 0.10064,
+      "reachability_score": 1.0,
+      "affected_package": "libcurl",
+      "installed_version": "8.12.1-r1",
+      "fixed_version": "8.14.1-r2",
+      "title": "curl: libcurl: Curl out of bounds read for cookie path",
+      "score_explanation": "Primary driver: CVSS severity | CVSS 5.3/10 \u2192 medium severity | EPSS 0.0003 \u2192 low exploit probability | Vulnerable component is reachable in runtime",
+      "cwe_ids": [
+        "CWE-125"
+      ],
+      "has_fix": true
+    },
+    {
+      "rank": 44,
+      "cve_id": "CVE-2024-58251",
+      "composite_score": 0.400308,
+      "composite_severity": "MEDIUM",
+      "cvss_v3_score": 5.0,
+      "cvss_severity": "MEDIUM",
+      "epss_score": 0.00077,
+      "epss_percentile": 0.2297,
+      "reachability_score": 1.0,
+      "affected_package": "busybox",
+      "installed_version": "1.37.0-r12",
+      "fixed_version": "1.37.0-r14",
+      "title": "In netstat in BusyBox through 1.37.0, local users can launch of networ ...",
+      "score_explanation": "Primary driver: CVSS severity | CVSS 5.0/10 \u2192 medium severity | EPSS 0.0008 \u2192 low exploit probability | Vulnerable component is reachable in runtime",
+      "cwe_ids": [
+        "CWE-150"
+      ],
+      "has_fix": true
+    },
+    {
+      "rank": 45,
+      "cve_id": "CVE-2024-58251",
+      "composite_score": 0.400308,
+      "composite_severity": "MEDIUM",
+      "cvss_v3_score": 5.0,
+      "cvss_severity": "MEDIUM",
+      "epss_score": 0.00077,
+      "epss_percentile": 0.2297,
+      "reachability_score": 1.0,
+      "affected_package": "busybox-binsh",
+      "installed_version": "1.37.0-r12",
+      "fixed_version": "1.37.0-r14",
+      "title": "In netstat in BusyBox through 1.37.0, local users can launch of networ ...",
+      "score_explanation": "Primary driver: CVSS severity | CVSS 5.0/10 \u2192 medium severity | EPSS 0.0008 \u2192 low exploit probability | Vulnerable component is reachable in runtime",
+      "cwe_ids": [
+        "CWE-150"
+      ],
+      "has_fix": true
+    },
+    {
+      "rank": 46,
+      "cve_id": "CVE-2024-58251",
+      "composite_score": 0.400308,
+      "composite_severity": "MEDIUM",
+      "cvss_v3_score": 5.0,
+      "cvss_severity": "MEDIUM",
+      "epss_score": 0.00077,
+      "epss_percentile": 0.2297,
+      "reachability_score": 1.0,
+      "affected_package": "ssl_client",
+      "installed_version": "1.37.0-r12",
+      "fixed_version": "1.37.0-r14",
+      "title": "In netstat in BusyBox through 1.37.0, local users can launch of networ ...",
+      "score_explanation": "Primary driver: CVSS severity | CVSS 5.0/10 \u2192 medium severity | EPSS 0.0008 \u2192 low exploit probability | Vulnerable component is reachable in runtime",
+      "cwe_ids": [
+        "CWE-150"
+      ],
+      "has_fix": true
+    },
+    {
+      "rank": 47,
+      "cve_id": "CVE-2025-10148",
+      "composite_score": 0.392408,
+      "composite_severity": "LOW",
+      "cvss_v3_score": 4.8,
+      "cvss_severity": "MEDIUM",
+      "epss_score": 0.00102,
+      "epss_percentile": 0.28032,
+      "reachability_score": 1.0,
+      "affected_package": "curl",
+      "installed_version": "8.12.1-r1",
+      "fixed_version": "8.14.1-r2",
+      "title": "curl: predictable WebSocket mask",
+      "score_explanation": "Primary driver: Reachability | CVSS 4.8/10 \u2192 medium severity | EPSS 0.0010 \u2192 low exploit probability | Vulnerable component is reachable in runtime",
+      "cwe_ids": [],
+      "has_fix": true
+    },
+    {
+      "rank": 48,
+      "cve_id": "CVE-2025-10148",
+      "composite_score": 0.392408,
+      "composite_severity": "LOW",
+      "cvss_v3_score": 4.8,
+      "cvss_severity": "MEDIUM",
+      "epss_score": 0.00102,
+      "epss_percentile": 0.28032,
+      "reachability_score": 1.0,
+      "affected_package": "libcurl",
+      "installed_version": "8.12.1-r1",
+      "fixed_version": "8.14.1-r2",
+      "title": "curl: predictable WebSocket mask",
+      "score_explanation": "Primary driver: Reachability | CVSS 4.8/10 \u2192 medium severity | EPSS 0.0010 \u2192 low exploit probability | Vulnerable component is reachable in runtime",
+      "cwe_ids": [],
+      "has_fix": true
+    },
+    {
+      "rank": 49,
+      "cve_id": "CVE-2025-5025",
+      "composite_score": 0.39224,
+      "composite_severity": "LOW",
+      "cvss_v3_score": 4.8,
+      "cvss_severity": "MEDIUM",
+      "epss_score": 0.0006,
+      "epss_percentile": 0.18822,
+      "reachability_score": 1.0,
+      "affected_package": "curl",
+      "installed_version": "8.12.1-r1",
+      "fixed_version": "8.14.0-r0",
+      "title": "curl: libcurl: QUIC Certificate Pinning Bypass",
+      "score_explanation": "Primary driver: Reachability | CVSS 4.8/10 \u2192 medium severity | EPSS 0.0006 \u2192 low exploit probability | Vulnerable component is reachable in runtime",
+      "cwe_ids": [
+        "CWE-295"
+      ],
+      "has_fix": true
+    },
+    {
+      "rank": 50,
+      "cve_id": "CVE-2025-5025",
+      "composite_score": 0.39224,
+      "composite_severity": "LOW",
+      "cvss_v3_score": 4.8,
+      "cvss_severity": "MEDIUM",
+      "epss_score": 0.0006,
+      "epss_percentile": 0.18822,
+      "reachability_score": 1.0,
+      "affected_package": "libcurl",
+      "installed_version": "8.12.1-r1",
+      "fixed_version": "8.14.0-r0",
+      "title": "curl: libcurl: QUIC Certificate Pinning Bypass",
+      "score_explanation": "Primary driver: Reachability | CVSS 4.8/10 \u2192 medium severity | EPSS 0.0006 \u2192 low exploit probability | Vulnerable component is reachable in runtime",
+      "cwe_ids": [
+        "CWE-295"
+      ],
+      "has_fix": true
+    },
+    {
+      "rank": 51,
+      "cve_id": "CVE-2025-68160",
+      "composite_score": 0.388096,
+      "composite_severity": "LOW",
+      "cvss_v3_score": 4.7,
+      "cvss_severity": "MEDIUM",
+      "epss_score": 0.00024,
+      "epss_percentile": 0.06273,
+      "reachability_score": 1.0,
+      "affected_package": "libcrypto3",
+      "installed_version": "3.3.3-r0",
+      "fixed_version": "3.3.6-r0",
+      "title": "openssl: OpenSSL: Denial of Service due to out-of-bounds write in BIO filter",
+      "score_explanation": "Primary driver: Reachability | CVSS 4.7/10 \u2192 medium severity | EPSS 0.0002 \u2192 low exploit probability | Vulnerable component is reachable in runtime",
+      "cwe_ids": [
+        "CWE-787"
+      ],
+      "has_fix": true
+    },
+    {
+      "rank": 52,
+      "cve_id": "CVE-2025-68160",
+      "composite_score": 0.388096,
+      "composite_severity": "LOW",
+      "cvss_v3_score": 4.7,
+      "cvss_severity": "MEDIUM",
+      "epss_score": 0.00024,
+      "epss_percentile": 0.06273,
+      "reachability_score": 1.0,
+      "affected_package": "libssl3",
+      "installed_version": "3.3.3-r0",
+      "fixed_version": "3.3.6-r0",
+      "title": "openssl: OpenSSL: Denial of Service due to out-of-bounds write in BIO filter",
+      "score_explanation": "Primary driver: Reachability | CVSS 4.7/10 \u2192 medium severity | EPSS 0.0002 \u2192 low exploit probability | Vulnerable component is reachable in runtime",
+      "cwe_ids": [
+        "CWE-787"
+      ],
+      "has_fix": true
+    },
+    {
+      "rank": 53,
+      "cve_id": "CVE-2025-64505",
+      "composite_score": 0.376072,
+      "composite_severity": "LOW",
+      "cvss_v3_score": 4.4,
+      "cvss_severity": "MEDIUM",
+      "epss_score": 0.00018,
+      "epss_percentile": 0.04731,
+      "reachability_score": 1.0,
+      "affected_package": "libpng",
+      "installed_version": "1.6.47-r0",
+      "fixed_version": "1.6.53-r0",
+      "title": "libpng: LIBPNG heap buffer overflow via malformed palette index",
+      "score_explanation": "Primary driver: Reachability | CVSS 4.4/10 \u2192 medium severity | EPSS 0.0002 \u2192 low exploit probability | Vulnerable component is reachable in runtime",
+      "cwe_ids": [
+        "CWE-125"
+      ],
+      "has_fix": true
+    },
+    {
+      "rank": 54,
+      "cve_id": "CVE-2025-5399",
+      "composite_score": 0.37284,
+      "composite_severity": "LOW",
+      "cvss_v3_score": 4.3,
+      "cvss_severity": "MEDIUM",
+      "epss_score": 0.0021,
+      "epss_percentile": 0.43296,
+      "reachability_score": 1.0,
+      "affected_package": "curl",
+      "installed_version": "8.12.1-r1",
+      "fixed_version": "8.14.1-r0",
+      "title": "curl: libcurl: WebSocket endless loop",
+      "score_explanation": "Primary driver: Reachability | CVSS 4.3/10 \u2192 medium severity | EPSS 0.0021 \u2192 low exploit probability | Vulnerable component is reachable in runtime",
+      "cwe_ids": [
+        "CWE-835"
+      ],
+      "has_fix": true
+    },
+    {
+      "rank": 55,
+      "cve_id": "CVE-2025-5399",
+      "composite_score": 0.37284,
+      "composite_severity": "LOW",
+      "cvss_v3_score": 4.3,
+      "cvss_severity": "MEDIUM",
+      "epss_score": 0.0021,
+      "epss_percentile": 0.43296,
+      "reachability_score": 1.0,
+      "affected_package": "libcurl",
+      "installed_version": "8.12.1-r1",
+      "fixed_version": "8.14.1-r0",
+      "title": "curl: libcurl: WebSocket endless loop",
+      "score_explanation": "Primary driver: Reachability | CVSS 4.3/10 \u2192 medium severity | EPSS 0.0021 \u2192 low exploit probability | Vulnerable component is reachable in runtime",
+      "cwe_ids": [
+        "CWE-835"
+      ],
+      "has_fix": true
+    },
+    {
+      "rank": 56,
+      "cve_id": "CVE-2025-69418",
+      "composite_score": 0.360028,
+      "composite_severity": "LOW",
+      "cvss_v3_score": 4.0,
+      "cvss_severity": "MEDIUM",
+      "epss_score": 7e-05,
+      "epss_percentile": 0.00637,
+      "reachability_score": 1.0,
+      "affected_package": "libcrypto3",
+      "installed_version": "3.3.3-r0",
+      "fixed_version": "3.3.6-r0",
+      "title": "openssl: OpenSSL: Information disclosure and data tampering via specific low-level OCB encryption/decryption calls",
+      "score_explanation": "Primary driver: Reachability | CVSS 4.0/10 \u2192 medium severity | EPSS 0.0001 \u2192 low exploit probability | Vulnerable component is reachable in runtime",
+      "cwe_ids": [
+        "CWE-325"
+      ],
+      "has_fix": true
+    },
+    {
+      "rank": 57,
+      "cve_id": "CVE-2025-69418",
+      "composite_score": 0.360028,
+      "composite_severity": "LOW",
+      "cvss_v3_score": 4.0,
+      "cvss_severity": "MEDIUM",
+      "epss_score": 7e-05,
+      "epss_percentile": 0.00637,
+      "reachability_score": 1.0,
+      "affected_package": "libssl3",
+      "installed_version": "3.3.3-r0",
+      "fixed_version": "3.3.6-r0",
+      "title": "openssl: OpenSSL: Information disclosure and data tampering via specific low-level OCB encryption/decryption calls",
+      "score_explanation": "Primary driver: Reachability | CVSS 4.0/10 \u2192 medium severity | EPSS 0.0001 \u2192 low exploit probability | Vulnerable component is reachable in runtime",
+      "cwe_ids": [
+        "CWE-325"
+      ],
+      "has_fix": true
+    },
+    {
+      "rank": 58,
+      "cve_id": "CVE-2025-46394",
+      "composite_score": 0.332332,
+      "composite_severity": "LOW",
+      "cvss_v3_score": 3.3,
+      "cvss_severity": "LOW",
+      "epss_score": 0.00083,
+      "epss_percentile": 0.24224,
+      "reachability_score": 1.0,
+      "affected_package": "busybox",
+      "installed_version": "1.37.0-r12",
+      "fixed_version": "1.37.0-r14",
+      "title": "In tar in BusyBox through 1.37.0, a TAR archive can have filenames hid ...",
+      "score_explanation": "Primary driver: Reachability | CVSS 3.3/10 \u2192 low severity | EPSS 0.0008 \u2192 low exploit probability | Vulnerable component is reachable in runtime",
+      "cwe_ids": [
+        "CWE-451"
+      ],
+      "has_fix": true
+    },
+    {
+      "rank": 59,
+      "cve_id": "CVE-2025-46394",
+      "composite_score": 0.332332,
+      "composite_severity": "LOW",
+      "cvss_v3_score": 3.3,
+      "cvss_severity": "LOW",
+      "epss_score": 0.00083,
+      "epss_percentile": 0.24224,
+      "reachability_score": 1.0,
+      "affected_package": "busybox-binsh",
+      "installed_version": "1.37.0-r12",
+      "fixed_version": "1.37.0-r14",
+      "title": "In tar in BusyBox through 1.37.0, a TAR archive can have filenames hid ...",
+      "score_explanation": "Primary driver: Reachability | CVSS 3.3/10 \u2192 low severity | EPSS 0.0008 \u2192 low exploit probability | Vulnerable component is reachable in runtime",
+      "cwe_ids": [
+        "CWE-451"
+      ],
+      "has_fix": true
+    },
+    {
+      "rank": 60,
+      "cve_id": "CVE-2025-46394",
+      "composite_score": 0.332332,
+      "composite_severity": "LOW",
+      "cvss_v3_score": 3.3,
+      "cvss_severity": "LOW",
+      "epss_score": 0.00083,
+      "epss_percentile": 0.24224,
+      "reachability_score": 1.0,
+      "affected_package": "ssl_client",
+      "installed_version": "1.37.0-r12",
+      "fixed_version": "1.37.0-r14",
+      "title": "In tar in BusyBox through 1.37.0, a TAR archive can have filenames hid ...",
+      "score_explanation": "Primary driver: Reachability | CVSS 3.3/10 \u2192 low severity | EPSS 0.0008 \u2192 low exploit probability | Vulnerable component is reachable in runtime",
+      "cwe_ids": [
+        "CWE-451"
+      ],
+      "has_fix": true
+    },
+    {
+      "rank": 61,
+      "cve_id": "CVE-2025-8961",
+      "composite_score": 0.332148,
+      "composite_severity": "LOW",
+      "cvss_v3_score": 3.3,
+      "cvss_severity": "LOW",
+      "epss_score": 0.00037,
+      "epss_percentile": 0.10846,
+      "reachability_score": 1.0,
+      "affected_package": "tiff",
+      "installed_version": "4.7.0-r0",
+      "fixed_version": "4.7.1-r0",
+      "title": "libtiff: LibTIFF memory corruption",
+      "score_explanation": "Primary driver: Reachability | CVSS 3.3/10 \u2192 low severity | EPSS 0.0004 \u2192 low exploit probability | Vulnerable component is reachable in runtime",
+      "cwe_ids": [
+        "CWE-119"
+      ],
+      "has_fix": true
+    },
+    {
+      "rank": 62,
+      "cve_id": "CVE-2025-9165",
+      "composite_score": 0.332116,
+      "composite_severity": "LOW",
+      "cvss_v3_score": 3.3,
+      "cvss_severity": "LOW",
+      "epss_score": 0.00029,
+      "epss_percentile": 0.08357,
+      "reachability_score": 1.0,
+      "affected_package": "tiff",
+      "installed_version": "4.7.0-r0",
+      "fixed_version": "4.7.1-r0",
+      "title": "libtiff: LibTIFF memory leak",
+      "score_explanation": "Primary driver: Reachability | CVSS 3.3/10 \u2192 low severity | EPSS 0.0003 \u2192 low exploit probability | Vulnerable component is reachable in runtime",
+      "cwe_ids": [
+        "CWE-401",
+        "CWE-404"
+      ],
+      "has_fix": true
+    },
+    {
+      "rank": 63,
+      "cve_id": "CVE-2025-9232",
+      "composite_score": 0.324144,
+      "composite_severity": "LOW",
+      "cvss_v3_score": 3.1,
+      "cvss_severity": "LOW",
+      "epss_score": 0.00036,
+      "epss_percentile": 0.10447,
+      "reachability_score": 1.0,
+      "affected_package": "libcrypto3",
+      "installed_version": "3.3.3-r0",
+      "fixed_version": "3.3.5-r0",
+      "title": "openssl: Out-of-bounds read in HTTP client no_proxy handling",
+      "score_explanation": "Primary driver: Reachability | CVSS 3.1/10 \u2192 low severity | EPSS 0.0004 \u2192 low exploit probability | Vulnerable component is reachable in runtime",
+      "cwe_ids": [
+        "CWE-125"
+      ],
+      "has_fix": true
+    },
+    {
+      "rank": 64,
+      "cve_id": "CVE-2025-9232",
+      "composite_score": 0.324144,
+      "composite_severity": "LOW",
+      "cvss_v3_score": 3.1,
+      "cvss_severity": "LOW",
+      "epss_score": 0.00036,
+      "epss_percentile": 0.10447,
+      "reachability_score": 1.0,
+      "affected_package": "libssl3",
+      "installed_version": "3.3.3-r0",
+      "fixed_version": "3.3.5-r0",
+      "title": "openssl: Out-of-bounds read in HTTP client no_proxy handling",
+      "score_explanation": "Primary driver: Reachability | CVSS 3.1/10 \u2192 low severity | EPSS 0.0004 \u2192 low exploit probability | Vulnerable component is reachable in runtime",
+      "cwe_ids": [
+        "CWE-125"
+      ],
+      "has_fix": true
+    },
+    {
+      "rank": 65,
+      "cve_id": "CVE-2025-6170",
+      "composite_score": 0.300136,
+      "composite_severity": "LOW",
+      "cvss_v3_score": 2.5,
+      "cvss_severity": "LOW",
+      "epss_score": 0.00034,
+      "epss_percentile": 0.09884,
+      "reachability_score": 1.0,
+      "affected_package": "libxml2",
+      "installed_version": "2.13.4-r5",
+      "fixed_version": "2.13.9-r0",
+      "title": "libxml2: Stack Buffer Overflow in xmllint Interactive Shell Command Handling",
+      "score_explanation": "Primary driver: Reachability | CVSS 2.5/10 \u2192 low severity | EPSS 0.0003 \u2192 low exploit probability | Vulnerable component is reachable in runtime",
+      "cwe_ids": [
+        "CWE-121"
+      ],
+      "has_fix": true
+    },
+    {
+      "rank": 66,
+      "cve_id": "CVE-2026-24515",
+      "composite_score": 0.30002,
+      "composite_severity": "LOW",
+      "cvss_v3_score": 2.5,
+      "cvss_severity": "LOW",
+      "epss_score": 5e-05,
+      "epss_percentile": 0.00261,
+      "reachability_score": 1.0,
+      "affected_package": "libexpat",
+      "installed_version": "2.7.0-r0",
+      "fixed_version": "2.7.4-r0",
+      "title": "libexpat: libexpat null pointer dereference",
+      "score_explanation": "Primary driver: Reachability | CVSS 2.5/10 \u2192 low severity | EPSS 0.0001 \u2192 low exploit probability | Vulnerable component is reachable in runtime",
+      "cwe_ids": [
+        "CWE-476"
+      ],
+      "has_fix": true
+    }
+  ]
+}

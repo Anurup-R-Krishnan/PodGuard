@@ -1,0 +1,22 @@
+version: "3.9"
+
+services:
+  epss-triage:
+    build: .
+    container_name: epss-triage
+    volumes:
+      - ./epss-reports:/app/epss-reports
+      - /var/run/docker.sock:/var/run/docker.sock:ro
+      - trivy-cache:/root/.cache/trivy
+      - epss-cache:/root/.cache/epss-triage
+    environment:
+      - EPSS_LOG_LEVEL=INFO
+      - EPSS_WEIGHT_CVSS=0.4
+      - EPSS_WEIGHT_EPSS=0.4
+      - EPSS_WEIGHT_REACHABILITY=0.2
+    entrypoint: ["epss-triage"]
+    command: ["--help"]
+
+volumes:
+  trivy-cache:
+  epss-cache:
